@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>
+Login
+    </title>
+
+</head>
+<style>
+#main{
+        background-color: rgb(222, 189, 222);
+        border: black;
+        border-radius:10px;
+        height:device-height;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+#l1{
+    list-style-type:none;
+}
+#hel{
+    font-size: 50px;
+    color:white;
+}
+#login{
+    color:rgb(44, 41, 41);
+    
+    border: white;
+    border-radius:10px; 
+}
+#email{
+    height:30px;
+    width:300px;
+    border: rgb(100, 22, 126);
+    border-style: solid;
+    border-radius:50px;
+    background-color:;
+}
+#pass{
+     height:30px;
+    width:300px;
+    border: rgb(100, 22, 126);
+    border-style: solid;
+    border-radius:50px;
+}
+#loginBox{
+    padding-top: 40px;
+    height:400px;
+    width:400px;
+    background-color:white;
+    border:pink;
+    border-radius:30px;
+}
+#submit{
+    height:30px;
+ border: rgb(237, 213, 242);
+ border-radius:50px;
+ border-style:solid;
+color:white;
+ background-color:rgb(156, 12, 196);
+ width:200px;
+}
+</style>
+<script>
+    function validuser(){
+       var email=document.forms["login"]["email"];
+       var pass=document.forms["login"]["pass"];
+
+       if(email.value==""&&pass.value==""){
+        alert("Please enter your email and password");
+        return false;
+       }
+       else if(email.value=="shopowner@gmail.com"&&pass.value=="shop"){
+        alert("login sucessfully");
+        return  true;
+       }
+       
+       else{
+        alert("Please enter valid email and password");
+        return false;
+       }
+    }
+    </script>
+<body>
+     <section id="main">
+        <center>
+            <ol id="l1">
+<li>
+<img src="download-removebg-preview.png">
+</li>
+<center><li><marquee><h1 id="hel" color="white">Welcome Back...!</h1></li></marquee></center>
+<section id="loginBox">
+<Center><H1 id="login">LOGIN</H1></Center>
+
+       <form  name="login" action="shop.html"method="get" enctype="application/x-www-form-urlencoded" id="login" onsubmit="return validuser()">
+        <label for="email">Enter Your Email:</label><input type="email" name = "email" id="email" placeholder ="email" required><br><br>
+<label for="pass">Enter your password</label>
+        <input type ="password" name ="password" id ="pass"placeholder="password" required ><br><br>
+        <input type ="submit" id="submit"><br><br>
+        <a href ="forgot.html">Forgot Password?</a>
+        <a href="wsregister.html" >new user?</a>
+        </form>
+        </section>
+</body>
